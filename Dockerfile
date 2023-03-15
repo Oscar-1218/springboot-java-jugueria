@@ -1,3 +1,3 @@
 FROM amazoncorreto:17-alpine-jdk
-COPY out/artifacts/curso_jar/curso.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/curso-0.0.1-SNAPSHOT.war app.war
+ENTRYPOINT ["java","-war","/app.war"]
